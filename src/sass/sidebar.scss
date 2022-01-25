@@ -1,0 +1,231 @@
+#sidebar {
+  position: absolute;
+  left: 0;
+  top:0;
+    .column-justcenter {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: $t-primary;
+      width: 4rem;
+      position: relative;
+      z-index: 9999;
+      button {
+        background: transparent;
+        border: none;
+        transition: 0.5s;
+        &:hover{
+          background: #ffffff;
+          transition: 0.5s;
+        }
+        &:active {
+          background: #ffffff;
+        }
+        &:focus {
+          border: none;
+          box-shadow: none;
+        }
+      }
+    }
+
+    #list{
+      filter: drop-shadow(5px 0 5px rgba(60,60,60,0.3));
+      left: 4rem;
+      width: 50vw;
+        .list-header{
+        background: $primary;
+        color: white;
+          .list-switch{
+            background: $primary;
+              span {
+                font-size: 16px;
+                color: lightgray;
+                transition: 0.5s;
+                &:hover {
+                  color: white;
+                  transition: 0.5s;
+                  font-size: 18px;
+                }
+              }
+          }
+        }
+        .listform {
+          color: white;
+          height: 100% !important;
+          overflow-y: hidden;
+        }
+      }
+
+    .list-create {
+    position: relative;
+    margin-bottom: 30px;
+
+      input{
+        border: none;
+        height: 56px;
+        border-radius: 50px;
+        padding: 15px 24px;
+        padding-right: 70px;
+      }
+
+      .createbtn{
+        width: 48px;
+        height: 40px;
+        font-size: 30px;
+        border-radius: 50px;
+        border: none;
+        background-color: $secondary;
+        color: $t-primary;
+        margin: auto;
+        display: grid;
+        place-items: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 10px;
+        transition: 0.5s;
+
+        &:hover {
+          background-color: darken($secondary, 5%)
+        }
+      }
+    }
+
+    #chartlist{
+      filter: drop-shadow(5px 0 5px rgba(60, 60, 60, 0.3));
+      left: 4rem;
+      width: 50vw;
+        .chart-header{
+          background: $primary;
+          color: white;
+          .daychart,.weekchart{
+            width: 48%;
+            .chartbox {
+              height: 165px;
+              padding: 10px;
+              background: transparent;
+              border: 1px solid rgba(255,255,255,0.5);
+              .chart-item-count{
+                border-right: 1px solid rgba(255,255,255,0.5);
+                .itemcount{
+                  font-size: 80px;
+                  color: green;
+                  line-height: 1.4;
+                }
+              }
+              .chart-item-finished {
+                border-right:transparent;
+                .itemFinished{
+                  font-size: 80px;
+                  color: orange;
+                  line-height: 1.4;
+                }
+              }
+            }
+          }
+          .chartstyle {
+            width: 70% !important;
+            margin: auto;
+          }
+        }
+    }
+  }
+
+  .text-s{
+    display: flex;
+    flex-wrap:wrap;
+    text-align: start;
+    justify-content: center;
+    .listborder {
+      border-bottom :1px solid white ;
+      padding-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      .editform{
+        position: relative;
+        .editbtnGroup{
+          display: flex;
+          position: absolute;
+          top: 5px;
+          right: 0;
+          .editbtn{
+            margin-left: 5px;
+            margin-right: 5px;
+            background:$secondary ;
+            border-radius:15px ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+            &:hover{
+              background: $secondary;
+              filter: saturate(3);
+            }
+          }
+        }
+      }
+    }
+  }
+  .list-btn-style{
+    button{
+      background: none;
+      border: none;
+    }
+  }
+  .b-sidebar-body{
+    background: $primary;
+  }
+
+  .working {
+    color: $secondary;
+  }
+  .workingdot {
+    color: $secondary;
+    width: 0px;
+    overflow-x: hidden;
+    animation-name: dotting;
+    animation-duration: 3s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+  }
+
+  @keyframes dotting{
+    0% {
+      width: 0px;
+    }
+    33% {
+      width: 10px;
+    }
+    67% {
+      width: 20px;
+    }
+    100%{
+      width: 30px;
+    }
+  }
+
+  .finishedClean {
+    width: 40px;
+    height: 40px;
+    background: transparent !important;
+    border: 2px solid white !important;
+    border-radius: 50%;
+  }
+
+  @media (max-width: 992px) {
+    #list {
+      width: 95vw !important;
+    }
+    #chartlist {
+      width: 95vw !important;
+    }
+  }
+
+  @media (max-width:576px) {
+    #list {
+      width: 92vw !important;
+    }
+    #chartlist {
+      width: 92vw !important;
+    }
+  }

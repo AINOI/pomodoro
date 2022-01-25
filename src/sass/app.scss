@@ -1,0 +1,60 @@
+.overflow-y{
+  overflow-y: hidden;
+}
+.overflow-x {
+  overflow-x: hidden;
+}
+
+#app {
+  font-family: 'Noto Sans TC', sans-serif;
+  text-align: center;
+  color: $t-primary;
+  overflow-x: hidden;
+}
+
+body {
+  background: $primary;
+}
+
+.bg{
+  background: url('~@/assets/img/tomato--orange.svg')no-repeat bottom center/80%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bgBreak{
+  background: url('~@/assets/img/tomato--green.svg')no-repeat bottom center/80%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.slideToRight {
+  left: 30% !important;
+}
+
+.modoru {
+  transition: 0.5s ease-in-out;
+}
+
+.hide {
+  display: none !important;
+}
+
+@media (max-width:768px) {
+  .bg,.bgBreak{
+    left: 30px !important;
+  }
+}
+
+@media (max-width:992px) {
+  .bg,.bgBreak {
+    left: 50px;
+  }
+}
